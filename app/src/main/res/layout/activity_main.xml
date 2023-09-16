@@ -47,9 +47,46 @@
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button"
-        android:textColor="@color/black"
-        android:backgroundTint="@color/btnBgColor"
+        android:text="SELECT DATE"
+        android:textColor="@color/textGray"
+        android:backgroundTint="@color/white"
+        android:textSize="16dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="14/9/2021"
+        android:textColor="@color/textBlue"
+        android:textSize="20sp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Selected Date"
+        android:textColor="@color/textGray"
+        android:textSize="15sp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="1440"
+        android:textColor="@color/textBlue"
+        android:textSize="25sp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Selected Date"
+        android:textColor="@color/textGray"
+        android:textSize="15sp"
         />
 
 </LinearLayout>
