@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
     fun clickDatePicker(view: View){
         val tvSelectedDate = findViewById<TextView>(R.id.tvSelectedDate)
         val tvSelectedDateInMinutes = findViewById<TextView>(R.id.tvSelectedDateInMinutes)
+        val tvSelecteDateInDays = findViewById<TextView>(R.id.tvSelectedDateInDays)
 
 
         val myCalendar = Calendar.getInstance()
@@ -44,14 +45,18 @@ class MainActivity : AppCompatActivity() {
                 val theDate  = sdf.parse(selectedDate)
 
                 val selectedDateInMinutes = theDate!!.time /60000
+                val selectedDateInDays = theDate!!.time / 86400000
 
                 val currentDate = sdf.parse(sdf.format(System.currentTimeMillis()))
 
                 val currentDateInMinutes = currentDate!!.time / 60000
+                val currentDateInDays = currentDate!!.time / 86400000
 
                 val differenceInMinutes = currentDateInMinutes - selectedDateInMinutes
+                val differenceInDays = currentDateInDays - selectedDateInDays
 
                 tvSelectedDateInMinutes.setText(differenceInMinutes.toString())
+                tvSelecteDateInDays.text = differenceInDays.toString()
             }, year, mounth, day)
 
         dpd.datePicker.maxDate = Date().time - 86400000
